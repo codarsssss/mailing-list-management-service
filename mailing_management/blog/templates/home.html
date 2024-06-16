@@ -1,0 +1,22 @@
+{% extends "base_generic.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<h1>Добро пожаловать на наш сайт</h1>
+<p>Здесь представлено основное содержимое главной страницы.</p>
+<p>Количество рассылок: {{ mailings_count }}</p>
+<p>Количество активных рассылок: {{ active_mailings_count }}</p>
+<p>Количество уникальных клиентов: {{ unique_clients_count }}</p>
+
+<h2>Случайные записи блога</h2>
+<ul>
+    {% for post in random_blog_posts %}
+    <li>
+        <h3>{{ post.title }}</h3>
+        <img src="{{ post.image.url }}" alt="{{ post.title }}" style="max-width: 100%; height: auto;">
+        <p>{{ post.content|truncatewords:30 }}</p>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,10 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>Удалить клиента</h1>
+  <form method="post">
+    {% csrf_token %}
+    <p>Вы уверены, что хотите удалить {{ client.full_name }}?</p>
+    <button type="submit">Удалить</button>
+  </form>
+{% endblock %}
