@@ -23,7 +23,7 @@
 ### Шаг 1: Клонирование репозитория
 
 ```bash
-git clone https://github.com/yourusername/mailing-management-service.git
+git clone git@github.com:codarsssss/mailing-list-management-service.git
 cd mailing-management-service
 python -m venv venv
 ```
